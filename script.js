@@ -3,7 +3,9 @@ let interview = [];
 let rejected = [];
 let currentStatus = 'all';
 
+if(interview.length == 0){
 
+}
 
 let total = document.getElementById('total');
 let rejectedCount = document.getElementById('rejectedCount');
@@ -49,6 +51,8 @@ function toggleStyle(id) {
     }
 };
 
+
+
 // Total count function
 function tolalCount() {
     total.innerText = allCart.children.length;
@@ -61,19 +65,16 @@ tolalCount();
 
 // let jobs = document.querySelectorAll('.card');
 
-function deleteJob(id){
-  const card = document.getElementById(id);
-  if (card) {
-    card.remove();
-  }
+function deleteJob(id) {
+    const card = document.getElementById(id);
+    if (card) {
+        card.remove();
+    }
 }
-// function updateCounts(){
-//  document.getElementById("total").innerText = jobs.length;
-// }
-// updateCounts();
 
 
 // main container click event delegation
+
 const mainContainer = document.querySelector('main');
 mainContainer.addEventListener('click', function (event) {
 
@@ -148,8 +149,19 @@ mainContainer.addEventListener('click', function (event) {
 
 // filter scection render function
 const filterSection = document.getElementById('filtered-section');
+
+function hiddenSection(){
+    if(interview == 0){
+        filterSection.classList.add('hidden');
+    } else {
+        filterSection.classList.remove('hidden');
+    }
+}
+hiddenSection();
+
 function renderInterview() {
     filterSection.innerHTML = '';
+
 
     for (let interviewMan of interview) {
 
@@ -182,12 +194,12 @@ function renderInterview() {
                         <button  class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                      <!-- main part 2 -->
-                <div>
+               
+                </div>
+          <div>
                     <button class="btn-delete text-red-600 border rounded-full px-2 py-2 inline-block"><i
                             class="fa-solid fa-trash-can"></i></button>
-                </div>
-                </div>
-         `
+                </div>`
         filterSection.appendChild(div);
     }
 };
@@ -217,34 +229,37 @@ function renderRejected() {
                         <p class="para">Build cross-platform mobile applications using React Native. Work on products
                             used by millions of users worldwide.</p>
                     </div>
-
-
                     <div class="flex gap-5">
                         <button onclick="toggleStyle('interview-filter-btn')" id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button onclick="toggleStyle('rejected-filter-btn')" class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
-                     <!-- main part 2 -->
+            </div>
+
+            </div>
+        
+           <!-- main part 2 -->
                 <div>
                     <button class="btn-delete text-red-600 border rounded-full px-2 py-2 inline-block"><i
                             class="fa-solid fa-trash-can"></i></button>
-                </div>
+                </div> 
 
-            </div>
-
-            </div>
+                </div> 
                 
-         `
+                `
         filterSection.appendChild(div);
     }
 };
 
 
+
 // delete button event delegation
 mainContainer.addEventListener('click', function (event) {
     if (event.target.classList.contains('btn-delete') || event.target.parentNode.classList.contains('btn-delete')) {
-        const card = event.target.closest('.card'); 
+        const card = event.target.closest('.card');
         card.remove();
+
     }
+    tolalCount();
 });
 
 
