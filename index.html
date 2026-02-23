@@ -61,6 +61,15 @@
                 id="rejected-filter-btn">rejected</button>
         </div>
 
+        <section id="hideen-section" class=" w-full bg-white shadow mx-auto rounded py-10">
+            <img src="./jobs.png" alt="" class="w-[100px] mx-auto">
+            <div class="hidden-text text-center my-4 space-y-2">
+                <h2 class="text-3xl">No jobs available</h2>
+                <p class="text-gray-500">Check back soon for new job opportunities</p>
+            </div>
+        
+        </section>
+
         <!-- Filtered card -->
 
         <section id="filtered-section" class="hidden">
@@ -70,10 +79,10 @@
         <section id="allCards" class="space-y-6">
 
             <!-- card 1 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    <!-- part 1 --
                     <div>
                         <p class="company text-4xl">Mobile First Corp</p>
                         <p class="position"> React Native Developer</p>
@@ -87,7 +96,7 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class=" bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Interviewed</button>
                         <p class="para">Build cross-platform mobile applications using React Native. Work on products
                             used by millions of users worldwide.</p>
                     </div>
@@ -101,12 +110,12 @@
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 2 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card2" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -124,7 +133,7 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Create stunning web experiences for high-profile clients. Must have portfolio
                             and experience
                             with modern web design trends.</p>
@@ -139,13 +148,13 @@
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 3 -->
 
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card3" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -162,26 +171,26 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Create stunning web experiences for high-profile clients. Must have portfolio
                             and experience with modern web design trends.</p>
                     </div>
 
 
                     <div class="flex gap-5">
-                        <button id="interviewbtn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 4 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card4" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -198,7 +207,7 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Transform complex data into compelling visualizations. Required skills: D3.js,
                             React, and strong analytical thinking.
                         </p>
@@ -206,19 +215,19 @@
 
 
                     <div class="flex gap-5">
-                        <button id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn"class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 5 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card5" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -235,28 +244,28 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Design and maintain scalable backend systems using Python and AWS. Work with
                             modern DevOps practices and cloud infrastructure.</p>
                     </div>
 
 
                     <div class="flex gap-5">
-                        <button id="interview-btn" onclick="addInterview()" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
 
             <!-- cart 6 -->
 
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card6" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -273,26 +282,26 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Create beautiful and functional user interfaces for our suite of products.
                             Strong design skills and frontend development expertise required..</p>
                     </div>
 
 
                     <div class="flex gap-5">
-                        <button id="interview-btn" onclick="addInterview()" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn"class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 7 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card7" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -309,26 +318,26 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Build enterprise applications with JavaScript and modern frameworks. We offer
                             competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
 
 
                     <div class="flex gap-5">
-                        <button id="interview-btn" onclick="addInterview()" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 8 -->
-            <div class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+            <div onclick="deleteJob(this.id)" id="card8" class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -345,21 +354,21 @@
                     </div>
                     <!-- part 3 -->
                     <div class="change-btn">
-                        <button id="hidden-btn" class="bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
+                        <button id="hidden-btn" class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not Applied</button>
                         <p class="para">Join our fast-growing startup and work on our core platform. Experience with
                             Node.js and React required. Great benefits and equity package included.</p>
                     </div>
 
 
                     <div class="flex gap-5">
-                        <button id="interview-btn" onclick="addInterview()" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
+                        <button id="interview-btn"class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
