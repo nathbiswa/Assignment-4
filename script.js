@@ -146,13 +146,14 @@ mainContainer.addEventListener('click', function (event) {
 
         if (currentStatus == 'interview-filter-btn') {
             renderInterview();
-        } else if (currentStatus == 'rejected-filter-btn') {
-            renderRejected();
         }
-
-        tolalCount();
-
+    } else if (currentStatus == 'rejected-filter-btn') {
+        renderRejected();
     }
+
+    tolalCount();
+
+
 });
 
 
@@ -171,7 +172,7 @@ function renderInterview() {
                 </div>`;
         return;
     }
-    
+
 
 
     for (let interviewMan of interview) {
@@ -225,10 +226,10 @@ function renderRejected() {
                     <p class="text-gray-500">Check back soon for new job opportunities</p>
                 </div>`;
         return;
-    
-    
+
+
     }
-    
+
 
     for (let rejectedMan of rejected) {
         let div = document.createElement('div');

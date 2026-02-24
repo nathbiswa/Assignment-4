@@ -25,20 +25,20 @@
 
 <body>
     <header class="w-[80%] mx-auto">
-        <h1 class=" sm:text-5xl md:text-6xl font-bold my-5">Job Application Tracker</h1>
+        <h1 class="  md:text-4xl font-bold my-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-8">
-            <div class="bg-white shadow p-6 md:p-7 rounded">
-                <p>Total</p>
-                <p id="total" class="sm:text-[12px]">0</p>
+            <div class="bg-white shadow md:p-5  rounded">
+                <p class=" text-[16px] md:text-xl">Total</p>
+                <p id="total" class="  md:text-xl">0</p>
             </div>
 
-            <div class="bg-white shadow p-6 md:p-7  rounded">
-                <p class="sm:text-[12px]">Interview</p>
-                <p id="interviewCount" class=" text-xl text-green-500 sm:text-[12px] ">0</p>
+            <div class="bg-white shadow  md:p-5  rounded">
+                <p class=" md:text-xl">Interview</p>
+                <p id="interviewCount" class=" text-xl text-green-500 md:text-xl ">0</p>
             </div>
-            <div class="bg-white shadow  p-6 md:p-7  rounded">
-                <p class="sm:text-[12px]">Rejected</p>
-                <p id="rejectedCount" class=" text-2xl sm:text-[12px] text-red-500">0</p>
+            <div class="bg-white shadow  md:p-5  rounded">
+                <p class="  md:text-xl">Rejected</p>
+                <p id="rejectedCount" class=" text-xl md:text-xl text-red-500">0</p>
             </div>
         </div>
     </header>
@@ -46,14 +46,14 @@
     <section id="rejected-section" class="w-[80%] mx-auto">
         <div id="job-section "
             class="flex items-center justify-between sm:flex-col sm:items-start md:flex-row md:items-center">
-            <h2 class="text-3xl my-4">Available Jobs</h2>
-            <div class="text-3xl" id="count-job"><span id="interview-upDown">0</span> <span class="mx-[4px]">of</span> <span id="job" class="mx-[5px]">0</span> Job</div>
+            <h2 class="md:text-3xl my-4">Available Jobs</h2>
+            <div class="md:text-3xl" id="count-job"><span id="interview-upDown">0</span> <span class="mx-[4px]">of</span> <span id="job" class="mx-[5px]">0</span> Job</div>
         </div>
     </section>
 
 
     <main class="w-[80%] mx-auto">
-        <div class="mb-6">
+        <div class="mb-6 flex md:col-2 gap-2">
             <button onclick="toggleStyle('all-filter-btn')" class="bg-black text-white px-5 py-2 rounded"
                 id="all-filter-btn">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" class="bg-gray-300 px-5 py-2 rounded"
@@ -69,25 +69,23 @@
         <section id="filtered-section" class="">
             
                
-
-            
         </section>
 
         <section id="allCards" class="space-y-6">
 
             <!-- card 1 -->
             <div  id="card"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">Mobile First Corp</p>
+                        <p class="company md:text-4xl text-xl ">Mobile First Corp</p>
                         <p class="position"> React Native Developer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Remote</p>
                         <p class="type ">Full-time </p>
                         <p class="salary ">$130,000 - $175,000</p>
@@ -112,23 +110,23 @@
 
                 <!-- main part 2 -->
                 <div>
-                    <button id="btn-delete" class="btn-delete text-red-600 border rounded-full px-2 py-2"><i
+                    <button id="btn-delete" class=" flex justify-center align-center md:mt-4 btn-delete text-red-600 border rounded-full px-2 py-2"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
             <!-- cart 2 -->
             <div  id="card2"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">WebFlow Agency</p>
+                        <p class="company md:text-4xl text-xl">WebFlow Agency</p>
                         <p class="position"> Web Designer & Developer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Los Angeles, CA
                         </p>
                         <p class="type ">• Part-time </p>
@@ -163,17 +161,17 @@
             <!-- cart 3 -->
 
             <div  id="card3"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">WebFlow Agency</p>
+                        <p class="company md:text-4xl text-xl">WebFlow Agency</p>
                         <p class="position"> Web Designer & Developer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Los Angeles, CA</p>
                         <p class="type "> • Part-time </p>
                         <p class="salary ">• $80,000 - $120,000</p>
@@ -205,17 +203,17 @@
             </div>
             <!-- cart 4 -->
             <div  id="card4"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">DataViz Solutions</p>
+                        <p class="company md:text-4xl text-xl">DataViz Solutions</p>
                         <p class="position"> Data Visualization Specialist</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Boston, MA</p>
                         <p class="type "> • Full-time </p>
                         <p class="salary "> • $125,000 - $165,000</p>
@@ -248,17 +246,17 @@
             </div>
             <!-- cart 5 -->
             <div  id="card5"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">CloudFirst Inc</p>
+                        <p class="company md:text-4xl text-xl">CloudFirst Inc</p>
                         <p class="position"> Backend Developer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Seattle, WA</p>
                         <p class="type "> • Full-time </p>
                         <p class="salary "> • $140,000 - $190,000</p>
@@ -292,17 +290,17 @@
             <!-- cart 6 -->
 
             <div  id="card6"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">Innovation Labs</p>
+                        <p class="company md:text-4xl text-xl">Innovation Labs</p>
                         <p class="position"> UI/UX Engineer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Austin, TX</p>
                         <p class="type "> • Full-time </p>
                         <p class="salary "> • $10,000 - $150,000</p>
@@ -334,17 +332,17 @@
             </div>
             <!-- cart 7 -->
             <div  id="card7"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between  shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">MegaCorp Solutions</p>
+                        <p class="company md:text-4xl text-xl">MegaCorp Solutions</p>
                         <p class="position"> JavaScript Developer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">New York, NY</p>
                         <p class="type "> • Full-time </p>
                         <p class="salary "> • $130,000 - $170,000</p>
@@ -376,17 +374,17 @@
             </div>
             <!-- cart 8 -->
             <div  id="card8"
-                class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
+                class="card flex justify-between shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
                     <div>
-                        <p class="company text-4xl">StartupXYZ</p>
+                        <p class="company md:text-4xl text-xl">StartupXYZ</p>
                         <p class="position"> Full Stack Engineer</p>
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 md:text-2xl text-[12px]">
                         <p class="subject ">Remote</p>
                         <p class="type "> • Full-time </p>
                         <p class="salary "> • $120,000 - $160,000</p>
