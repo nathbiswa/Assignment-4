@@ -2,15 +2,18 @@
 let interview = [];
 let rejected = [];
 let currentStatus = 'all';
+let rejectedStatus = 'all';
 
-if(interview.length == 0){
+// if(interview.length == 0){
 
-}
+// }
 
 let total = document.getElementById('total');
 let rejectedCount = document.getElementById('rejectedCount');
 let interviewCount = document.getElementById('interviewCount');
 let allCart = document.getElementById('allCards');
+let jobs = document.getElementById('job');
+let interviewUpDown = document.getElementById('interview-upDown');
 
 
 function toggleStyle(id) {
@@ -37,15 +40,15 @@ function toggleStyle(id) {
 
     if (id == 'interview-filter-btn') {
         allCart.classList.add('hidden');
-        filterSection.classList.remove('hidden');
+        // filterSection.classList.remove('hidden');
         renderInterview();
 
     } else if (id == 'all-filter-btn') {
         allCart.classList.remove('hidden');
-        filterSection.classList.add('hidden');
+        filterSection.innerHTML = '';
     } else if (id == 'rejected-filter-btn') {
         allCart.classList.add('hidden');
-        filterSection.classList.remove('hidden');
+        // filterSection.classList.remove('hidden');
         renderRejected();
 
     }
@@ -56,6 +59,8 @@ function toggleStyle(id) {
 // Total count function
 function tolalCount() {
     total.innerText = allCart.children.length;
+    jobs.innerText = allCart.children.length;
+    interviewUpDown.innerText = interview.length;
     rejectedCount.innerText = rejected.length;
     interviewCount.innerText = interview.length;
 }
@@ -65,12 +70,12 @@ tolalCount();
 
 // let jobs = document.querySelectorAll('.card');
 
-function deleteJob(id) {
-    const card = document.getElementById(id);
-    if (card) {
-        card.remove();
-    }
-}
+// function deleteJob(id) {
+//     const card = document.getElementById(id);
+//     if (card) {
+//         card.remove();
+//     }
+// }
 
 
 // main container click event delegation
@@ -102,13 +107,15 @@ mainContainer.addEventListener('click', function (event) {
             interview.push(cardInfo);
         }
 
-        tolalCount();
+
 
         rejected = rejected.filter(item => item.companyName !== cardInfo.companyName);
 
         if (currentStatus == 'rejected-filter-btn') {
             renderRejected();
         }
+
+        tolalCount();
 
     } else if (event.target.classList.contains('rejected-btn')) {
         const parentNode = event.target.parentNode.parentNode;
@@ -117,6 +124,9 @@ mainContainer.addEventListener('click', function (event) {
         const subject = parentNode.querySelector('.subject').innerText;
         const type = parentNode.querySelector('.type').innerText;
         const salary = parentNode.querySelector('.salary').innerText;
+        const rejectedStatus = parentNode.querySelector('.hidden-btn-2');
+        // rejectedStatus.innerText = 'Rejected';
+        rejectedStatus.classList.remove('hidden');
 
         const cardInfo = {
             companyName,
@@ -150,17 +160,23 @@ mainContainer.addEventListener('click', function (event) {
 // filter scection render function
 const filterSection = document.getElementById('filtered-section');
 
-function hiddenSection(){
-    if(interview == 0){
-        filterSection.classList.add('hidden');
-    } else {
-        filterSection.classList.remove('hidden');
-    }
-}
-hiddenSection();
+// function hiddenSection(){
+
+// }
+// hiddenSection();
 
 function renderInterview() {
     filterSection.innerHTML = '';
+    if (interview.length == 0) {
+        filterSection.className = 'w-full bg-white shadow mx-auto rounded py-10 px-6';
+        filterSection.innerHTML = ` <img src="./jobs.png" alt="" class="w-[100px] mx-auto">
+                <div class="hidden-text text-center my-4 space-y-2">
+                    <h2 class="text-3xl">No jobs available</h2>
+                    <p class="text-gray-500">Check back soon for new job opportunities</p>
+                </div>`;
+        return;
+    }
+    
 
 
     for (let interviewMan of interview) {
@@ -204,7 +220,20 @@ function renderInterview() {
     }
 };
 function renderRejected() {
+
     filterSection.innerHTML = '';
+    if (rejected.length == 0) {
+       
+        filterSection.innerHTML = ` <img src="./jobs.png" alt="" class="w-[100px] mx-auto">
+                <div class="hidden-text text-center my-4 space-y-2">
+                    <h2 class="text-3xl">No jobs available</h2>
+                    <p class="text-gray-500">Check back soon for new job opportunities</p>
+                </div>`;
+        return;
+    
+    
+    }
+    
 
     for (let rejectedMan of rejected) {
         let div = document.createElement('div');
@@ -224,11 +253,13 @@ function renderRejected() {
                         <p class="salary ">${rejectedMan.salary}</p>
                     </div>
                     <!-- part 3 -->
+
                     <div class="change-btn">
-                        <button id="hidden-btn" class=" bg-red-100  text-red-700  rounded  px-4 py-2">Rejected</button>
+                        <button id="hidden-btn-2" class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2">Rejected</button>
                         <p class="para">Build cross-platform mobile applications using React Native. Work on products
                             used by millions of users worldwide.</p>
                     </div>
+
                     <div class="flex gap-5">
                         <button onclick="toggleStyle('interview-filter-btn')" id="interview-btn" class="interview-btn text-green-500 rounded border px-4 py-2">Interview</button>
                         <button onclick="toggleStyle('rejected-filter-btn')" class="rejected-btn text-red-500 rounded border px-4 py-2">Rejected</button>

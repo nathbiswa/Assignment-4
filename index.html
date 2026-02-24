@@ -34,11 +34,11 @@
 
             <div class="bg-white shadow p-6 md:p-7  rounded">
                 <p class="sm:text-[12px]">Interview</p>
-                <p id="interviewCount" class="text-green-500 sm:text-[12px] ">0</p>
+                <p id="interviewCount" class=" text-xl text-green-500 sm:text-[12px] ">0</p>
             </div>
             <div class="bg-white shadow  p-6 md:p-7  rounded">
                 <p class="sm:text-[12px]">Rejected</p>
-                <p id="rejectedCount" class=" sm:text-[12px] text-red-500">0</p>
+                <p id="rejectedCount" class=" text-2xl sm:text-[12px] text-red-500">0</p>
             </div>
         </div>
     </header>
@@ -47,7 +47,7 @@
         <div id="job-section "
             class="flex items-center justify-between sm:flex-col sm:items-start md:flex-row md:items-center">
             <h2 class="text-3xl my-4">Available Jobs</h2>
-            <div class="text-3xl" id="count-job"><span id="job" class="">0</span>Job</div>
+            <div class="text-3xl" id="count-job"><span id="interview-upDown">0</span> <span class="mx-[4px]">of</span> <span id="job" class="mx-[5px]">0</span> Job</div>
         </div>
     </section>
 
@@ -66,21 +66,17 @@
 
         <!-- Filtered card -->
 
-        <section id="filtered-section" class="hidden">
-            <section id="hideen-section" class=" w-full bg-white shadow mx-auto rounded py-10">
-                <img src="./jobs.png" alt="" class="w-[100px] mx-auto">
-                <div class="hidden-text text-center my-4 space-y-2">
-                    <h2 class="text-3xl">No jobs available</h2>
-                    <p class="text-gray-500">Check back soon for new job opportunities</p>
-                </div>
+        <section id="filtered-section" class="">
+            
+               
 
-            </section>
+            
         </section>
 
         <section id="allCards" class="space-y-6">
 
             <!-- card 1 -->
-            <div onclick="deleteJob(this.id)" id="card"
+            <div  id="card"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -100,6 +96,8 @@
                     <div class="change-btn">
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Interviewed</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Build cross-platform mobile applications using React Native. Work on products
                             used by millions of users worldwide.</p>
                     </div>
@@ -119,7 +117,7 @@
                 </div>
             </div>
             <!-- cart 2 -->
-            <div onclick="deleteJob(this.id)" id="card2"
+            <div  id="card2"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -141,6 +139,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                            <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Create stunning web experiences for high-profile clients. Must have portfolio
                             and experience
                             with modern web design trends.</p>
@@ -162,7 +162,7 @@
             </div>
             <!-- cart 3 -->
 
-            <div onclick="deleteJob(this.id)" id="card3"
+            <div  id="card3"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -183,6 +183,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Create stunning web experiences for high-profile clients. Must have portfolio
                             and experience with modern web design trends.</p>
                     </div>
@@ -202,7 +204,7 @@
                 </div>
             </div>
             <!-- cart 4 -->
-            <div onclick="deleteJob(this.id)" id="card4"
+            <div  id="card4"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -223,6 +225,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Transform complex data into compelling visualizations. Required skills: D3.js,
                             React, and strong analytical thinking.
                         </p>
@@ -243,7 +247,7 @@
                 </div>
             </div>
             <!-- cart 5 -->
-            <div onclick="deleteJob(this.id)" id="card5"
+            <div  id="card5"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -264,6 +268,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Design and maintain scalable backend systems using Python and AWS. Work with
                             modern DevOps practices and cloud infrastructure.</p>
                     </div>
@@ -285,7 +291,7 @@
 
             <!-- cart 6 -->
 
-            <div onclick="deleteJob(this.id)" id="card6"
+            <div  id="card6"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -306,6 +312,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Create beautiful and functional user interfaces for our suite of products.
                             Strong design skills and frontend development expertise required..</p>
                     </div>
@@ -325,7 +333,7 @@
                 </div>
             </div>
             <!-- cart 7 -->
-            <div onclick="deleteJob(this.id)" id="card7"
+            <div  id="card7"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -346,6 +354,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Build enterprise applications with JavaScript and modern frameworks. We offer
                             competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
@@ -365,7 +375,7 @@
                 </div>
             </div>
             <!-- cart 8 -->
-            <div onclick="deleteJob(this.id)" id="card8"
+            <div  id="card8"
                 class="card flex justify-between sm:flex-col md:flex-row shadow p-8">
                 <!-- main part 1 -->
                 <div class="space-y-6">
@@ -386,6 +396,8 @@
                         <button id="hidden-btn"
                             class=" hidden-btn bg-green-100  text-green-700  rounded  px-4 py-2 hidden">Not
                             Applied</button>
+                        <button id="hidden-btn-2"
+                            class=" hidden-btn-2 bg-red-100  text-red-700  rounded  px-4 py-2 hidden">Rejected</button>
                         <p class="para">Join our fast-growing startup and work on our core platform. Experience with
                             Node.js and React required. Great benefits and equity package included.</p>
                     </div>
