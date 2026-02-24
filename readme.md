@@ -15,12 +15,12 @@
 <!-- isert is confuse word for me-->
 ## Answer no.2 
 
-#  Create element rules with DOM - let div = document.createElement('div');
-#                                  div.className = "card flex justify-between shadow p-8";
-#                                   div.innerHTML = <div>
-#          <p class="company md:text-4xl text-xl">I am love my country</p>
-#         <p class="position"> I am a Progaming Hero Student </p>
-#            </div>
+  Create element rules with DOM - let div = document.createElement('div');
+                                  div.className = "card flex justify-between shadow p-8";
+                                   div.innerHTML = <div>
+         <p class="company md:text-4xl text-xl">I am love my country</p>
+        <p class="position"> I am a Progaming Hero Student </p>
+           </div>
 
 
 
