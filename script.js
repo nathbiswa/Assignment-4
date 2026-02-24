@@ -160,11 +160,6 @@ mainContainer.addEventListener('click', function (event) {
 // filter scection render function
 const filterSection = document.getElementById('filtered-section');
 
-// function hiddenSection(){
-
-// }
-// hiddenSection();
-
 function renderInterview() {
     filterSection.innerHTML = '';
     if (interview.length == 0) {
@@ -223,7 +218,7 @@ function renderRejected() {
 
     filterSection.innerHTML = '';
     if (rejected.length == 0) {
-       
+        filterSection.className = 'w-full bg-white shadow mx-auto rounded py-10 px-6';
         filterSection.innerHTML = ` <img src="./jobs.png" alt="" class="w-[100px] mx-auto">
                 <div class="hidden-text text-center my-4 space-y-2">
                     <h2 class="text-3xl">No jobs available</h2>
